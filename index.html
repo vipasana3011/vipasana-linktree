@@ -1,58 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vipasana Linktree 💖</title>
-  
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <title>Vipasana | Digital Space ✨</title>
+
+  <!-- SEO -->
+  <meta name="description"
+    content="Official links of Vipasana 💖 Portfolio, socials, projects and more." />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7023QWFM6"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-S7023QWFM6');
+
+    function trackLink(platform) {
+      gtag('event', 'click', {
+        event_category: 'Social Link',
+        event_label: platform
+      });
+    }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <div class="card">
-    <!-- Profile Picture -->
-    <img src="profile.pic.jpg" 
-         alt="Your Pic" 
-         class="profile-img">
-         
-    <div class="name">Vipasana 💖</div>
-    <div class="bio">✨ Connect with me 🌸</div>
+  <!-- Mouse Glow -->
+  <div class="cursor-glow"></div>
 
-    <!-- Work / Portfolio Section -->
-    <div class="section-title">💼 Work</div>
-    <a href="https://vipasana-portfolio.vercel.app//" class="link">
-      <i class="fas fa-user-astronaut"></i> Portfolio
-    </a>
-    <a href="mailto:vipasana3011@gmail.com" class="link">
-      <i class="fas fa-envelope"></i> Mail
-    </a>
-    <a href="https://github.com/vipasana3011" class="link">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/vipasana" class="link">
-      <i class="fab fa-linkedin"></i> LinkedIn
+  <!-- Floating Blur -->
+  <div class="blur blur-1"></div>
+  <div class="blur blur-2"></div>
+
+  <main class="card">
+
+    <!-- Profile -->
+    <img src="profile.pic.jpg" alt="Vipasana" class="profile-img">
+
+    <h1 class="name">Vipasana ✨</h1>
+
+    <p class="bio">
+      Digital creator • Developer • Dreamer 🌸
+    </p>
+
+    <!-- Badge -->
+    <div class="badge">
+      <i class="fa-solid fa-heart"></i>
+      Welcome to my digital world
+    </div>
+
+    <!-- Work -->
+    <div class="section-title">Work & Portfolio</div>
+
+    <a href="https://vipasana-portfolio.vercel.app/"
+      class="link"
+      target="_blank"
+      onclick="trackLink('Portfolio')">
+
+      <i class="fas fa-globe"></i>
+      Portfolio Website
     </a>
 
-    <!-- Social Media Section -->
-    <div class="section-title">🌸 Social Media</div>
-    <a href="https://www.instagram.com/_vipasana_" class="link">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a href="https://www.youtube.com/@vipasana30" class="link">
-      <i class="fab fa-youtube"></i> YouTube
-    </a>
-    <a href="https://www.snapchat.com/add/vipasana_30" class="link">
-      <i class="fab fa-snapchat"></i> Snapchat
+    <a href="mailto:vipasana3011@gmail.com"
+      class="link"
+      onclick="trackLink('Mail')">
+
+      <i class="fas fa-envelope"></i>
+      Mail Me
     </a>
 
-    <footer>Made with 💕 by Vipasana</footer>
-  </div>
+    <a href="https://github.com/vipasana3011"
+      class="link"
+      target="_blank"
+      onclick="trackLink('GitHub')">
 
-  <!-- JS -->
+      <i class="fab fa-github"></i>
+      GitHub
+    </a>
+
+    <a href="https://www.linkedin.com/in/vipasana"
+      class="link"
+      target="_blank"
+      onclick="trackLink('LinkedIn')">
+
+      <i class="fab fa-linkedin"></i>
+      LinkedIn
+    </a>
+
+    <!-- Social -->
+    <div class="section-title">Socials</div>
+
+    <a href="https://www.instagram.com/_vipasana_"
+      class="link"
+      target="_blank"
+      onclick="trackLink('Instagram')">
+
+      <i class="fab fa-instagram"></i>
+      Instagram
+    </a>
+
+    <a href="https://www.youtube.com/@vipasana30"
+      class="link"
+      target="_blank"
+      onclick="trackLink('YouTube')">
+
+      <i class="fab fa-youtube"></i>
+      YouTube
+    </a>
+
+    <a href="https://www.snapchat.com/add/vipasana_30"
+      class="link"
+      target="_blank"
+      onclick="trackLink('Snapchat')">
+
+      <i class="fab fa-snapchat"></i>
+      Snapchat
+    </a>
+
+    <!-- Footer -->
+    <footer>
+      Crafted with 💖 by Vipasana
+    </footer>
+
+  </main>
+
   <script src="script.js"></script>
+
 </body>
+
 </html>
