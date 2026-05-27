@@ -4,17 +4,27 @@
 <head>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
 
   <title>Vipasana Linktree</title>
 
   <!-- SEO -->
-  <meta name="description" content="Official links of Vipasana" />
+
+  <meta
+    name="description"
+    content="Vipasana official links and socials" />
 
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7023QWFM6"></script>
+
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-S7023QWFM6">
+  </script>
 
   <script>
+
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
@@ -28,39 +38,50 @@
     function trackLink(platform) {
 
       gtag('event', 'click', {
+
         event_category: 'Links',
         event_label: platform
+
       });
 
     }
+
   </script>
 
   <!-- Fonts -->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+    href="https://fonts.googleapis.com">
 
   <link rel="preconnect"
     href="https://fonts.gstatic.com"
     crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Font Awesome -->
 
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- CSS -->
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet"
+    href="style.css" />
 
 </head>
 
 <body>
 
+  <!-- Main Card -->
+
   <main class="card">
+
+    <!-- Top Glow -->
+
+    <div class="top-blur"></div>
 
     <!-- Profile -->
 
@@ -69,80 +90,178 @@
       alt="Vipasana"
       class="profile-img">
 
+    <!-- Heading -->
+
     <h1 class="name">
       Vipasana Linktree
     </h1>
 
     <p class="subtitle">
-      All my important links in one place
+      All my links in one place
     </p>
 
     <!-- Links -->
 
     <div class="links">
 
-      <a href="https://vipasana-portfolio.vercel.app/"
-        class="link"
+      <!-- Portfolio -->
+
+      <a
+        href="https://vipasana-portfolio.vercel.app/"
         target="_blank"
+        class="link"
         onclick="trackLink('Portfolio')">
 
-        <i class="fas fa-globe"></i>
-        Portfolio
+        <div class="icon-box">
+
+          <i class="fas fa-globe"></i>
+
+        </div>
+
+        <span>
+          Portfolio
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
-      <a href="mailto:vipasana3011@gmail.com"
-        class="link"
-        onclick="trackLink('Mail')">
+      <!-- Email -->
 
-        <i class="fas fa-envelope"></i>
-        Email
+      <a
+        href="mailto:vipasana3011@gmail.com"
+        class="link"
+        onclick="trackLink('Email')">
+
+        <div class="icon-box">
+
+          <i class="fas fa-envelope"></i>
+
+        </div>
+
+        <span>
+          Email
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
-      <a href="https://github.com/vipasana3011"
-        class="link"
+      <!-- GitHub -->
+
+      <a
+        href="https://github.com/vipasana3011"
         target="_blank"
+        class="link"
         onclick="trackLink('GitHub')">
 
-        <i class="fab fa-github"></i>
-        GitHub
+        <div class="icon-box">
+
+          <i class="fab fa-github"></i>
+
+        </div>
+
+        <span>
+          GitHub
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
-      <a href="https://www.linkedin.com/in/vipasana"
-        class="link"
+      <!-- LinkedIn -->
+
+      <a
+        href="https://www.linkedin.com/in/vipasana"
         target="_blank"
+        class="link"
         onclick="trackLink('LinkedIn')">
 
-        <i class="fab fa-linkedin"></i>
-        LinkedIn
+        <div class="icon-box">
+
+          <i class="fab fa-linkedin-in"></i>
+
+        </div>
+
+        <span>
+          LinkedIn
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
-      <a href="https://www.instagram.com/_vipasana_"
-        class="link"
+      <!-- Instagram -->
+
+      <a
+        href="https://www.instagram.com/_vipasana_"
         target="_blank"
+        class="link"
         onclick="trackLink('Instagram')">
 
-        <i class="fab fa-instagram"></i>
-        Instagram
+        <div class="icon-box">
+
+          <i class="fab fa-instagram"></i>
+
+        </div>
+
+        <span>
+          Instagram
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
-      <a href="https://www.youtube.com/@vipasana30"
-        class="link"
+      <!-- YouTube -->
+
+      <a
+        href="https://www.youtube.com/@vipasana30"
         target="_blank"
+        class="link"
         onclick="trackLink('YouTube')">
 
-        <i class="fab fa-youtube"></i>
-        YouTube
+        <div class="icon-box">
+
+          <i class="fab fa-youtube"></i>
+
+        </div>
+
+        <span>
+          YouTube
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
+
+      </a>
+
+      <!-- Snapchat -->
+
+      <a
+        href="https://www.snapchat.com/add/vipasana_30"
+        target="_blank"
+        class="link"
+        onclick="trackLink('Snapchat')">
+
+        <div class="icon-box">
+
+          <i class="fab fa-snapchat-ghost"></i>
+
+        </div>
+
+        <span>
+          Snapchat
+        </span>
+
+        <i class="fas fa-arrow-right arrow"></i>
 
       </a>
 
     </div>
 
   </main>
+
+  <!-- JS -->
 
   <script src="script.js"></script>
 
