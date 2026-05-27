@@ -9,13 +9,15 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0" />
 
-  <title>Vipasana Linktree</title>
+  <title>
+    Vipasana Linktree
+  </title>
 
   <!-- SEO -->
 
   <meta
     name="description"
-    content="Vipasana official links and socials" />
+    content="Official links of Vipasana" />
 
   <!-- Google Analytics -->
 
@@ -25,7 +27,8 @@
 
   <script>
 
-    window.dataLayer = window.dataLayer || [];
+    window.dataLayer =
+      window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
@@ -33,13 +36,17 @@
 
     gtag('js', new Date());
 
-    gtag('config', 'G-S7023QWFM6');
+    gtag(
+      'config',
+      'G-S7023QWFM6'
+    );
 
     function trackLink(platform) {
 
       gtag('event', 'click', {
 
         event_category: 'Links',
+
         event_label: platform
 
       });
@@ -58,7 +65,7 @@
     crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Font Awesome -->
@@ -75,20 +82,35 @@
 
 <body>
 
+  <!-- Background Glow -->
+
+  <div class="bg-glow glow1"></div>
+  <div class="bg-glow glow2"></div>
+
   <!-- Main Card -->
 
   <main class="card">
 
-    <!-- Top Glow -->
+    <!-- Top Bar -->
 
-    <div class="top-blur"></div>
+    <div class="top-bar">
+
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+
+    </div>
 
     <!-- Profile -->
 
-    <img
-      src="profile.pic.jpg"
-      alt="Vipasana"
-      class="profile-img">
+    <div class="profile-wrap">
+
+      <img
+        src="profile.pic.jpg"
+        alt="Vipasana"
+        class="profile-img">
+
+    </div>
 
     <!-- Heading -->
 
@@ -97,10 +119,22 @@
     </h1>
 
     <p class="subtitle">
-      All my links in one place
+      Explore all my official links
     </p>
 
-    <!-- Links -->
+    <!-- WORK SECTION -->
+
+    <div class="section-title">
+
+      <span class="line"></span>
+
+      <h2>
+        Work
+      </h2>
+
+      <span class="line"></span>
+
+    </div>
 
     <div class="links">
 
@@ -112,15 +146,23 @@
         class="link"
         onclick="trackLink('Portfolio')">
 
-        <div class="icon-box">
+        <div class="icon-box portfolio">
 
           <i class="fas fa-globe"></i>
 
         </div>
 
-        <span>
-          Portfolio
-        </span>
+        <div class="link-text">
+
+          <h3>
+            Portfolio
+          </h3>
+
+          <p>
+            View my projects & work
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
@@ -133,15 +175,23 @@
         class="link"
         onclick="trackLink('Email')">
 
-        <div class="icon-box">
+        <div class="icon-box mail">
 
           <i class="fas fa-envelope"></i>
 
         </div>
 
-        <span>
-          Email
-        </span>
+        <div class="link-text">
+
+          <h3>
+            Email
+          </h3>
+
+          <p>
+            Contact me directly
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
@@ -155,15 +205,23 @@
         class="link"
         onclick="trackLink('GitHub')">
 
-        <div class="icon-box">
+        <div class="icon-box github">
 
           <i class="fab fa-github"></i>
 
         </div>
 
-        <span>
-          GitHub
-        </span>
+        <div class="link-text">
+
+          <h3>
+            GitHub
+          </h3>
+
+          <p>
+            Explore my repositories
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
@@ -177,19 +235,45 @@
         class="link"
         onclick="trackLink('LinkedIn')">
 
-        <div class="icon-box">
+        <div class="icon-box linkedin">
 
           <i class="fab fa-linkedin-in"></i>
 
         </div>
 
-        <span>
-          LinkedIn
-        </span>
+        <div class="link-text">
+
+          <h3>
+            LinkedIn
+          </h3>
+
+          <p>
+            Professional profile
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
       </a>
+
+    </div>
+
+    <!-- SOCIAL SECTION -->
+
+    <div class="section-title">
+
+      <span class="line"></span>
+
+      <h2>
+        Social Links
+      </h2>
+
+      <span class="line"></span>
+
+    </div>
+
+    <div class="links">
 
       <!-- Instagram -->
 
@@ -199,15 +283,23 @@
         class="link"
         onclick="trackLink('Instagram')">
 
-        <div class="icon-box">
+        <div class="icon-box instagram">
 
           <i class="fab fa-instagram"></i>
 
         </div>
 
-        <span>
-          Instagram
-        </span>
+        <div class="link-text">
+
+          <h3>
+            Instagram
+          </h3>
+
+          <p>
+            Lifestyle & updates
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
@@ -221,15 +313,23 @@
         class="link"
         onclick="trackLink('YouTube')">
 
-        <div class="icon-box">
+        <div class="icon-box youtube">
 
           <i class="fab fa-youtube"></i>
 
         </div>
 
-        <span>
-          YouTube
-        </span>
+        <div class="link-text">
+
+          <h3>
+            YouTube
+          </h3>
+
+          <p>
+            Watch my content
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
@@ -243,15 +343,23 @@
         class="link"
         onclick="trackLink('Snapchat')">
 
-        <div class="icon-box">
+        <div class="icon-box snapchat">
 
           <i class="fab fa-snapchat-ghost"></i>
 
         </div>
 
-        <span>
-          Snapchat
-        </span>
+        <div class="link-text">
+
+          <h3>
+            Snapchat
+          </h3>
+
+          <p>
+            Connect with me here
+          </p>
+
+        </div>
 
         <i class="fas fa-arrow-right arrow"></i>
 
