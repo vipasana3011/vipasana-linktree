@@ -1,1 +1,3 @@
-# vipasana3011.github.io
+# LinkTree Clone
+
+A simple LinkTree-style website built with HTML, CSS, and JavaScript.
