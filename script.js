@@ -1,10 +1,14 @@
-// Premium Luxury Interactions ✨
+// ==========================
+// LINKS
+// ==========================
 
 const links =
   document.querySelectorAll(".link");
 
 
-// Smooth Reveal Animation 💖
+// ==========================
+// REVEAL ANIMATION
+// ==========================
 
 window.addEventListener("load", () => {
 
@@ -13,76 +17,75 @@ window.addEventListener("load", () => {
     link.style.opacity = "0";
 
     link.style.transform =
-      "translateY(30px)";
+      "translateY(20px)";
 
     setTimeout(() => {
 
       link.style.transition =
-        "all 0.8s cubic-bezier(.22,1,.36,1)";
+        "all 0.6s ease";
 
       link.style.opacity = "1";
 
       link.style.transform =
         "translateY(0px)";
 
-    }, index * 130);
+    }, index * 100);
 
   });
 
 });
 
 
-// Premium 3D Hover Effect 🌸
+// ==========================
+// PREMIUM HOVER
+// ==========================
 
 links.forEach((link) => {
 
-  link.addEventListener("mousemove", (e) => {
-
-    const rect =
-      link.getBoundingClientRect();
-
-    const x =
-      e.clientX - rect.left;
-
-    const y =
-      e.clientY - rect.top;
-
-    const centerX =
-      rect.width / 2;
-
-    const centerY =
-      rect.height / 2;
-
-    const rotateX =
-      ((y - centerY) / 18);
-
-    const rotateY =
-      ((centerX - x) / 18);
+  link.addEventListener("mouseenter", () => {
 
     link.style.transform =
-
-      `perspective(900px)
-       rotateX(${rotateX}deg)
-       rotateY(${rotateY}deg)
-       scale(1.02)`;
+      "translateY(-2px) scale(1.01)";
 
   });
 
   link.addEventListener("mouseleave", () => {
 
     link.style.transform =
-
-      `perspective(900px)
-       rotateX(0deg)
-       rotateY(0deg)
-       scale(1)`;
+      "translateY(0px) scale(1)";
 
   });
 
 });
 
 
-// Mouse Luxury Glow ✨
+// ==========================
+// CLICK EFFECT
+// ==========================
+
+links.forEach((link) => {
+
+  link.addEventListener("click", () => {
+
+    link.style.transition =
+      "0.15s ease";
+
+    link.style.transform =
+      "scale(0.99)";
+
+    setTimeout(() => {
+
+      link.style.transform =
+        "scale(1)";
+
+    }, 120);
+
+  });
+
+});
+// ==========================
+// MOUSE GLOW
+// ==========================
 
 const glow =
   document.createElement("div");
@@ -102,9 +105,11 @@ document.addEventListener("mousemove", (e) => {
 });
 
 
-// Floating Luxury Particles 💅
+// ==========================
+// FLOATING PARTICLES
+// ==========================
 
-for(let i = 0; i < 18; i++){
+for(let i = 0; i < 8; i++){
 
   const particle =
     document.createElement("span");
@@ -115,13 +120,13 @@ for(let i = 0; i < 18; i++){
     Math.random() * 100 + "vw";
 
   particle.style.animationDuration =
-    (Math.random() * 8 + 10) + "s";
+    (Math.random() * 6 + 12) + "s";
 
   particle.style.animationDelay =
     Math.random() * 5 + "s";
 
   const size =
-    Math.random() * 4 + 3;
+    Math.random() * 3 + 2;
 
   particle.style.width =
     size + "px";
@@ -134,45 +139,21 @@ for(let i = 0; i < 18; i++){
 }
 
 
-// Click Pulse Effect 🌸
-
-links.forEach((link) => {
-
-  link.addEventListener("click", () => {
-
-    link.style.transition =
-      "0.15s ease";
-
-    link.style.transform =
-      "scale(0.96)";
-
-    setTimeout(() => {
-
-      link.style.transform =
-        "scale(1)";
-
-    }, 140);
-
-  });
-
-});
-
-
-// Inject Extra Styles ✨
+// ==========================
+// EXTRA STYLES
+// ==========================
 
 const style =
-  document.createElement("style");
+document.createElement("style");
 
 style.innerHTML = `
-
-/* Mouse Glow */
 
 .mouse-glow{
 
   position:fixed;
 
-  width:260px;
-  height:260px;
+  width:180px;
+  height:180px;
 
   border-radius:50%;
 
@@ -186,26 +167,21 @@ style.innerHTML = `
 
       circle,
 
-      rgba(255,79,160,0.18) 0%,
+      rgba(255,79,160,.08) 0%,
 
-      rgba(255,79,160,0.08) 35%,
+      rgba(255,79,160,.04) 40%,
 
-      transparent 70%
+      transparent 75%
 
     );
 
   transform:
     translate(-50%,-50%);
 
-  filter:blur(16px);
-
-  transition:
-    left 0.08s linear,
-    top 0.08s linear;
+  filter:blur(20px);
 }
 
-
-/* Floating Particles */
+/* Particles */
 
 .particle{
 
@@ -216,19 +192,14 @@ style.innerHTML = `
   border-radius:50%;
 
   background:
-    rgba(255,255,255,0.5);
-
-  z-index:0;
+    rgba(255,255,255,.35);
 
   pointer-events:none;
 
+  z-index:0;
+
   animation:
     floatParticle linear infinite;
-
-  filter:
-    blur(0.5px);
-
-  opacity:0.8;
 }
 
 @keyframes floatParticle{
@@ -243,32 +214,30 @@ style.innerHTML = `
   }
 
   15%{
-    opacity:1;
+    opacity:.7;
   }
 
   100%{
 
     transform:
       translateY(-120vh)
-      translateX(40px)
-      scale(1.4);
+      translateX(30px)
+      scale(1.2);
 
     opacity:0;
   }
 
 }
-
 `;
 
 document.head.appendChild(style);
 
 
-// Console Signature 😌
+// ==========================
+// SIGNATURE
+// ==========================
 
 console.log(
-
-  "%cVipasana Linktree ✨",
-
-  "color:#ff4fa0; font-size:18px; font-weight:bold;"
-
+"%cVipasana ✨",
+"color:#ff4fa0;font-size:18px;font-weight:bold;"
 );
