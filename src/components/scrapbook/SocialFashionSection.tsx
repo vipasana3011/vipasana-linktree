@@ -4,7 +4,6 @@ import React from "react";
 import { SOCIAL_LINKS, FASHION_SCENE_CUTOUTS } from "../../data/scrapbookData";
 import WorldSectionDivider from "./WorldSectionDivider";
 import SocialPolaroidCard from "./SocialPolaroidCard";
-import SocialPinCard from "./SocialPinCard";
 import SocialCamCard from "./SocialCamCard";
 import SocialMirrorCard from "./SocialMirrorCard";
 import FloatingCutout from "./FloatingCutout";
@@ -30,19 +29,17 @@ export default function SocialFashionSection({ mousePos }: SocialFashionSectionP
       {/* Section Header */}
       <WorldSectionDivider
         title="Fashion, Aesthetic & Lifestyle"
-        subtitle="Visual inspiration, digital journals & Pinterest moodboards"
+        subtitle="Visual inspiration, digital journals & daily aesthetics"
         badge="WORLD 02 • FASHION ATELIER"
         world="fashion"
       />
 
-      {/* The 4 Physical Interactive Fashion Cards */}
+      {/* Physical Interactive Fashion Cards (Instagram, YouTube, Snapchat) */}
       <div className="space-y-4 relative z-20">
         {SOCIAL_LINKS.map((link, index) => {
           switch (link.type) {
             case "polaroid":
               return <SocialPolaroidCard key={link.id} link={link} index={index} />;
-            case "pin":
-              return <SocialPinCard key={link.id} link={link} index={index} />;
             case "camcorder":
               return <SocialCamCard key={link.id} link={link} index={index} />;
             case "mirror":

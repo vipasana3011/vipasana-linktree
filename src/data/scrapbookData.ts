@@ -1,7 +1,6 @@
 export interface ScrapbookLink {
   id: string;
   title: string;
-  subtitle: string;
   url: string;
   category: "tech" | "social";
   type:
@@ -10,14 +9,11 @@ export interface ScrapbookLink {
     | "badge"
     | "envelope"
     | "polaroid"
-    | "pin"
     | "camcorder"
     | "mirror";
-  badgeText?: string;
   accentColor: string;
   glowColor: string;
   stickerCutout?: string;
-  charmEmoji?: string;
 }
 
 export interface ScrapbookSticker {
@@ -25,7 +21,6 @@ export interface ScrapbookSticker {
   name: string;
   src?: string;
   type?: "image" | "bow" | "flower" | "sparkle" | "perfume" | "lipgloss" | "star";
-  // Position as percentage from container (0-100) or CSS offsets
   x: number;
   y: number;
   size: number;
@@ -33,15 +28,15 @@ export interface ScrapbookSticker {
   floatDuration: number;
   floatDelay: number;
   zIndex: number;
-  depth: number; // 1 to 3 for parallax multiplier
+  depth: number;
 }
 
 export const PROFILE_DATA = {
   name: "Vipasana",
   title: "Creative Technologist • Fashion & Aesthetics",
   tagline: "Bridging computer science, creative editorial & digital aesthetics",
-  profileImage: "/profile.pic.jpg", // Real circular profile portrait
-  secondaryImage: "/images/vipasana-portrait-1.jpg",
+  profileImage: "/profile.pic.jpg",
+  secondaryImage: "/images/vipasana-portrait-new.jpg",
   handle: "@_vipasana_",
   email: "vipasana3011@gmail.com",
   location: "Delhi, India",
@@ -51,49 +46,41 @@ export const PROFILE_DATA = {
 export const WORK_LINKS: ScrapbookLink[] = [
   {
     id: "portfolio",
-    title: "Digital Portfolio",
-    subtitle: "Projects, case studies & interactive design",
+    title: "Portfolio",
     url: "https://vipasana-portfolio.vercel.app/",
     category: "tech",
     type: "browser",
-    badgeText: "vipasana.me/portfolio",
-    accentColor: "#C05676", // Romantic Rose
+    accentColor: "#C05676",
     glowColor: "rgba(192, 86, 118, 0.25)",
     stickerCutout: "/images/cutouts/items/work_laptop.png",
   },
   {
     id: "github",
-    title: "GitHub Repositories",
-    subtitle: "Open source, frontend builds & code experiments",
+    title: "GitHub",
     url: "https://github.com/vipasana3011",
     category: "tech",
     type: "code",
-    badgeText: "git commit -m 'sparkle'",
-    accentColor: "#8B1E3F", // Deep Cherry
+    accentColor: "#8B1E3F",
     glowColor: "rgba(139, 30, 63, 0.25)",
     stickerCutout: "/images/cutouts/items/work_keyboard.png",
   },
   {
     id: "linkedin",
-    title: "LinkedIn Profile",
-    subtitle: "Professional background & tech journey",
+    title: "LinkedIn",
     url: "https://www.linkedin.com/in/vipasana",
     category: "tech",
     type: "badge",
-    badgeText: "VIP ACCESS • DEV PASS",
-    accentColor: "#5B7C99", // Soft Slate Blue
+    accentColor: "#5B7C99",
     glowColor: "rgba(91, 124, 153, 0.25)",
     stickerCutout: "/images/cutouts/items/work_headphones.png",
   },
   {
     id: "email",
-    title: "Direct Inquiries",
-    subtitle: "Collaborations, creative projects & coffee chats",
+    title: "Email",
     url: "mailto:vipasana3011@gmail.com",
     category: "tech",
     type: "envelope",
-    badgeText: "POSTAGE PREPAID ♡",
-    accentColor: "#B5838D", // Dusty Rose
+    accentColor: "#B5838D",
     glowColor: "rgba(181, 131, 141, 0.25)",
     stickerCutout: "/images/cutouts/items/work_coffee.png",
   },
@@ -103,35 +90,19 @@ export const SOCIAL_LINKS: ScrapbookLink[] = [
   {
     id: "instagram",
     title: "Instagram",
-    subtitle: "Lifestyle, aesthetic diaries & reels",
     url: "https://www.instagram.com/_vipasana_/",
     category: "social",
     type: "polaroid",
-    badgeText: "@_vipasana_",
     accentColor: "#D45277",
     glowColor: "rgba(212, 82, 119, 0.3)",
     stickerCutout: "/images/cutouts/items/social_cherries.png",
   },
   {
-    id: "pinterest",
-    title: "Pinterest Moodboards",
-    subtitle: "Fashion curation, aesthetic visual inspiration",
-    url: "https://in.pinterest.com/pin/627548529371867885/",
-    category: "social",
-    type: "pin",
-    badgeText: "CURATED BOARDS",
-    accentColor: "#E04859",
-    glowColor: "rgba(224, 72, 89, 0.3)",
-    stickerCutout: "/images/cutouts/items/social_letter.png",
-  },
-  {
     id: "youtube",
-    title: "YouTube Channel",
-    subtitle: "Vlogs, creative days & visual stories",
+    title: "YouTube",
     url: "https://www.youtube.com/@vipasana30",
     category: "social",
     type: "camcorder",
-    badgeText: "NOW STREAMING 4K",
     accentColor: "#C92A2A",
     glowColor: "rgba(201, 42, 42, 0.3)",
     stickerCutout: "/images/cutouts/items/social_cocktail.png",
@@ -139,11 +110,9 @@ export const SOCIAL_LINKS: ScrapbookLink[] = [
   {
     id: "snapchat",
     title: "Snapchat",
-    subtitle: "Daily snaps, behind the scenes & quick chats",
     url: "https://www.snapchat.com/add/vipasana_30",
     category: "social",
     type: "mirror",
-    badgeText: "@vipasana_30",
     accentColor: "#E5A93C",
     glowColor: "rgba(229, 169, 60, 0.3)",
     stickerCutout: "/images/cutouts/items/social_cupcake.png",
