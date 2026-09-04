@@ -37,7 +37,7 @@ export const PROFILE_DATA = {
   tagline: "Bridging creative tech, visual editorial & digital aesthetics",
   profileImage: "/profile.pic.jpg",
   secondaryImage: "/images/vipasana-portrait-new.jpg",
-  handle: "@_vipasana_",
+  handle: "@vipasnaa",
   email: "vipasana3011@gmail.com",
   location: "Delhi, India",
   domain: "vipasana.me",
@@ -90,7 +90,7 @@ export const SOCIAL_LINKS: ScrapbookLink[] = [
   {
     id: "instagram",
     title: "Instagram",
-    url: "https://www.instagram.com/_vipasana_/",
+    url: "https://www.instagram.com/vipasnaa/",
     category: "social",
     type: "polaroid",
     accentColor: "#D45277",
