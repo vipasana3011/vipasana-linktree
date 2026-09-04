@@ -7,7 +7,6 @@ import IntroCinematic from "../components/scrapbook/IntroCinematic";
 import ScrapbookTopBar from "../components/scrapbook/ScrapbookTopBar";
 import ProfileHero from "../components/scrapbook/ProfileHero";
 import TechSection from "../components/scrapbook/TechSection";
-import WorldTransitionBanner from "../components/scrapbook/WorldTransitionBanner";
 import SocialFashionSection from "../components/scrapbook/SocialFashionSection";
 import ScrapbookFooter from "../components/scrapbook/ScrapbookFooter";
 
@@ -23,7 +22,7 @@ export default function Home() {
   const [activeWorld, setActiveWorld] = useState<"tech" | "fashion">("tech");
 
   const techRef = useRef<HTMLDivElement>(null);
-  const fashionRef = useRef<HTMLDivElement>(null);
+  const socialRef = useRef<HTMLDivElement>(null);
 
   // Smooth mouse coordinates tracking for desktop parallax
   useEffect(() => {
@@ -41,9 +40,9 @@ export default function Home() {
   // Update active world based on scroll position
   useEffect(() => {
     const handleScroll = () => {
-      if (!fashionRef.current) return;
-      const fashionTop = fashionRef.current.getBoundingClientRect().top;
-      if (fashionTop < window.innerHeight * 0.45) {
+      if (!socialRef.current) return;
+      const socialTop = socialRef.current.getBoundingClientRect().top;
+      if (socialTop < window.innerHeight * 0.5) {
         setActiveWorld("fashion");
       } else {
         setActiveWorld("tech");
@@ -63,8 +62,8 @@ export default function Home() {
     techRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToFashion = () => {
-    fashionRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToSocial = () => {
+    socialRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -87,7 +86,7 @@ export default function Home() {
 
       {/* Ambient Dreamy Glow Spot 1 (Top Left) */}
       <div
-        className="fixed top-1/4 -left-32 w-[420px] h-[420px] rounded-full blur-[140px] pointer-events-none opacity-30 transition-colors duration-1000 z-0"
+        className="fixed top-1/4 -left-32 w-[380px] h-[380px] rounded-full blur-[140px] pointer-events-none opacity-30 transition-colors duration-1000 z-0"
         style={{
           backgroundColor: activeWorld === "fashion" ? "#FBCFE8" : "#FEF3C7",
         }}
@@ -95,7 +94,7 @@ export default function Home() {
 
       {/* Ambient Dreamy Glow Spot 2 (Bottom Right) */}
       <div
-        className="fixed top-2/3 -right-32 w-[460px] h-[460px] rounded-full blur-[140px] pointer-events-none opacity-25 transition-colors duration-1000 z-0"
+        className="fixed top-2/3 -right-32 w-[420px] h-[420px] rounded-full blur-[140px] pointer-events-none opacity-25 transition-colors duration-1000 z-0"
         style={{
           backgroundColor: activeWorld === "fashion" ? "#F5D0FE" : "#FCE7F3",
         }}
@@ -106,32 +105,27 @@ export default function Home() {
         onReplayIntro={handleReplayIntro}
         activeWorld={activeWorld}
         onScrollToTech={scrollToTech}
-        onScrollToFashion={scrollToFashion}
+        onScrollToFashion={scrollToSocial}
       />
 
       {/* ========================================================================= */}
       {/* 5. MAIN DIGITAL SCRAPBOOK MOODBOARD CONTAINER */}
       {/* ========================================================================= */}
-      <div className="relative z-10 w-full max-w-xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 flex flex-col items-center">
-        {/* Profile Hero: Circular Real Portrait + Pinned Halo Miniatures */}
+      <div className="relative z-10 w-full max-w-lg mx-auto px-4 sm:px-6 pt-14 sm:pt-16 flex flex-col items-center">
+        {/* Profile Hero: Person-Focused Portrait + Pinned Halo Miniatures */}
         <ProfileHero mousePos={mousePos} />
 
         {/* ======================================================================= */}
-        {/* WORLD 01 — WORK & TECH COLLECTION ("Creative Desk") */}
+        {/* WORK SECTION */}
         {/* ======================================================================= */}
-        <div ref={techRef} className="w-full">
+        <div ref={techRef} className="w-full mt-2">
           <TechSection mousePos={mousePos} />
         </div>
 
         {/* ======================================================================= */}
-        {/* WORLD TRANSITION BANNER (Tech Desk -> Fashion Atelier) */}
+        {/* SOCIAL SECTION */}
         {/* ======================================================================= */}
-        <WorldTransitionBanner />
-
-        {/* ======================================================================= */}
-        {/* WORLD 02 — SOCIAL & FASHION COLLECTION ("Pinterest Moodboard") */}
-        {/* ======================================================================= */}
-        <div ref={fashionRef} className="w-full">
+        <div ref={socialRef} className="w-full">
           <SocialFashionSection mousePos={mousePos} />
         </div>
 
