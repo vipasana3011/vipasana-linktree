@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-ivory: #FDFBF7;
+  --bg-cream: #FAF6F0;
+  --bg-blush: #FCEEE9;
+  --bg-lavender: #F6EFF9;
+  --accent-cherry: #8B1E3F;
+  --accent-rose: #C05676;
+  --accent-gold: #D4AF37;
+  --text-primary: #221619;
+  --text-secondary: #6B555B;
+  --text-muted: #9E858D;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-ivory);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8D5DC;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C05676;
+}
+
+/* Selection Color */
+::selection {
+  background: #FCE7F3;
+  color: #8B1E3F;
+}
+
+/* Paper Grain Texture Overlay */
+.paper-grain {
+  background-image: radial-gradient(rgba(139, 30, 63, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* 3D Perspective Context */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Scrapbook Card Soft Tactile Shadows */
+.shadow-scrapbook {
+  box-shadow: 
+    0 16px 36px -12px rgba(100, 40, 60, 0.09),
+    0 4px 12px -2px rgba(60, 20, 30, 0.05),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.shadow-scrapbook-hover {
+  box-shadow: 
+    0 24px 48px -12px rgba(139, 30, 63, 0.16),
+    0 8px 20px -4px rgba(60, 20, 30, 0.08),
+    0 0 0 1px rgba(192, 86, 118, 0.2),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+}
+
+.shadow-polaroid {
+  box-shadow: 
+    0 22px 45px -14px rgba(70, 30, 40, 0.14),
+    0 4px 12px -2px rgba(45, 15, 25, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.95);
+}
+
+.shadow-sticker {
+  filter: drop-shadow(0 8px 16px rgba(139, 30, 63, 0.15));
+}
+
+.shadow-sticker-hover {
+  filter: drop-shadow(0 14px 24px rgba(139, 30, 63, 0.25));
+}
+
+/* Holographic Foil Iridescent Shimmer */
+@keyframes holoShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.holographic-foil {
+  background: linear-gradient(
+    115deg,
+    rgba(255, 214, 230, 0.5) 0%,
+    rgba(254, 240, 138, 0.5) 25%,
+    rgba(187, 247, 208, 0.5) 50%,
+    rgba(199, 210, 254, 0.5) 75%,
+    rgba(255, 214, 230, 0.5) 100%
+  );
+  background-size: 250% 250%;
+  animation: holoShimmer 6s ease infinite;
+}
+
+/* Washi Tape Strip */
+.washi-tape {
+  background: rgba(255, 248, 238, 0.75);
+  backdrop-filter: blur(4px);
+  border-left: 2px dashed rgba(212, 175, 55, 0.3);
+  border-right: 2px dashed rgba(212, 175, 55, 0.3);
+  box-shadow: 0 2px 6px rgba(139, 30, 63, 0.08);
+}
+
+/* Glass Sheen Swipe */
+.glass-sheen {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-sheen::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 65%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.glass-sheen:hover::after {
+  transform: translateX(100%);
+}
+
+/* Editorial Title Typography */
+.font-editorial {
+  font-family: var(--font-cinzel), "Cormorant Garamond", Georgia, serif;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
