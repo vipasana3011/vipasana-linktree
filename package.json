@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export:sync": "next build && node -e \"const fs=require('fs'); fs.copyFileSync('out/index.html', 'index.html'); fs.copyFileSync('out/404.html', '404.html'); fs.rmSync('_next', {recursive:true, force:true}); fs.cpSync('out/_next', '_next', {recursive:true}); console.log('✓ Export synced to root successfully!');\"",
+    "export:sync": "next build && node -e \"const fs=require('fs'); fs.copyFileSync('out/index.html', 'index.html'); fs.copyFileSync('out/404.html', '404.html'); fs.rmSync('_next', {recursive:true, force:true}); fs.cpSync('out/_next', '_next', {recursive:true}); fs.rmSync('images', {recursive:true, force:true}); fs.cpSync('out/images', 'images', {recursive:true}); fs.copyFileSync('out/profile.pic.jpg', 'profile.pic.jpg'); console.log('✓ Export and images synced to root successfully!');\"",
     "start": "next start",
     "lint": "next lint"
   },
