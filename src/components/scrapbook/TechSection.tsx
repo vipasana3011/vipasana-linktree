@@ -3,9 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { WORK_LINKS } from "../../data/scrapbookData";
+import { WORK_LINKS, TECH_SCENE_CUTOUTS } from "../../data/scrapbookData";
 import WorldSectionDivider from "./WorldSectionDivider";
 import DesignerLinkCard from "./DesignerLinkCard";
+import FloatingCutout from "./FloatingCutout";
 
 interface TechSectionProps {
   mousePos: { x: number; y: number };
@@ -18,7 +19,20 @@ export default function TechSection({ mousePos }: TechSectionProps) {
   return (
     <section className="relative w-full max-w-md sm:max-w-lg mx-auto px-2 sm:px-4 pt-1 pb-6 z-20">
       {/* ======================================================================= */}
-      {/* CUTE 3D TECH GIRL CHARACTER STICKER (Placed gracefully on the right) */}
+      {/* AESTHETIC FLOATING CUTOUTS: LAPTOP, BLOSSOM FLOWER, COFFEE, HEADPHONES */}
+      {/* ======================================================================= */}
+      <div className="absolute inset-0 pointer-events-none overflow-visible">
+        {TECH_SCENE_CUTOUTS.map((sticker) => (
+          <FloatingCutout
+            key={sticker.id}
+            sticker={sticker}
+            mousePos={mousePos}
+          />
+        ))}
+      </div>
+
+      {/* ======================================================================= */}
+      {/* CUTE 3D TECH GIRL CHARACTER STICKER (Placed on the right edge) */}
       {/* ======================================================================= */}
       <motion.div
         animate={{
@@ -26,7 +40,7 @@ export default function TechSection({ mousePos }: TechSectionProps) {
           y: parallaxY,
         }}
         transition={{ type: "spring", stiffness: 60, damping: 20 }}
-        className="absolute -right-6 sm:-right-16 top-0 z-30 pointer-events-none drop-shadow-[0_12px_24px_rgba(139,30,63,0.22)]"
+        className="absolute -right-8 sm:-right-16 -top-2 z-30 pointer-events-none drop-shadow-[0_12px_24px_rgba(139,30,63,0.22)]"
       >
         <motion.div
           animate={{
